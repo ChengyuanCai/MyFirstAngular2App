@@ -10,30 +10,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var FavoriteComponent = (function () {
-    function FavoriteComponent() {
-        this.isFavorite = false;
-        this.change = new core_1.EventEmitter();
+var LikeComponent = (function () {
+    function LikeComponent() {
+        this.isLike = false;
+        this.totalLikes = 0;
     }
-    FavoriteComponent.prototype.changeFilling = function () {
-        this.isFavorite = !this.isFavorite;
-        this.change.emit({ newValue: this.isFavorite });
+    LikeComponent.prototype.Like = function () {
+        this.isLike = !this.isLike;
+        this.totalLikes += this.isLike ? 1 : -1;
     };
-    return FavoriteComponent;
+    return LikeComponent;
 }());
 __decorate([
     core_1.Input(),
     __metadata("design:type", Object)
-], FavoriteComponent.prototype, "isFavorite", void 0);
+], LikeComponent.prototype, "isLike", void 0);
 __decorate([
-    core_1.Output(),
+    core_1.Input(),
     __metadata("design:type", Object)
-], FavoriteComponent.prototype, "change", void 0);
-FavoriteComponent = __decorate([
+], LikeComponent.prototype, "totalLikes", void 0);
+LikeComponent = __decorate([
     core_1.Component({
-        selector: 'favorite',
-        template: "<i class=\"glyphicon\" [class.glyphicon-star-empty]=\"!isFavorite\" [class.glyphicon-star]=\"isFavorite\" (click)=\"changeFilling()\"> \n  \t\t\t </i>",
+        selector: 'like',
+        template: "<i class=\"glyphicon glyphicon-heart\" [class.highlighted]=\"isLike\" (click)=\"Like()\"></i>\n\t\t\t\t<span> {{ totalLikes }} </span>",
+        styles: ["\n\t.glyphicon-heart {\n\t\tcolor: #ccc;\n\t\tcursor: pointer;\n\t}\n\n\t.highlighted {\n\t\tcolor: deeppink;\n\t}\n\t"
+        ]
     })
-], FavoriteComponent);
-exports.FavoriteComponent = FavoriteComponent;
-//# sourceMappingURL=favorite.component.js.map
+], LikeComponent);
+exports.LikeComponent = LikeComponent;
+//# sourceMappingURL=like.component.js.map

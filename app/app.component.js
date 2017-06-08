@@ -10,13 +10,31 @@ var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
         this.title = "My First Angular App";
+        this.post = {
+            title: 'title',
+            isFavorite: true
+        };
+        this.tweet = {
+            totalLikes: 10,
+            isLike: false
+        };
+        this.votes = {
+            voteCount: 10,
+            myVote: 0
+        };
     }
+    AppComponent.prototype.onFavoriteChange = function ($event) {
+        console.log($event);
+    };
+    AppComponent.prototype.onVote = function ($event) {
+        console.log($event);
+    };
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "<h1>{{title}}</h1>\n  \t\t\t <courses></courses>\n  \t\t\t <authors></authors>\n  \t\t\t <favorite></favorite>\n                "
+        templateUrl: 'app/favorite.template.html'
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;

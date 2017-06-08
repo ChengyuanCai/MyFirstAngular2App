@@ -15,6 +15,8 @@ var course_service_1 = require("./course.service");
 var author_service_1 = require("./author.service");
 var auto_grow_directive_1 = require("./auto-grow.directive");
 var favorite_component_1 = require("./favorite.component");
+var like_component_1 = require("./like.component");
+var vote_component_1 = require("./vote.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -23,7 +25,7 @@ var AppModule = (function () {
 AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule],
-        declarations: [app_component_1.AppComponent, courses_component_1.CoursesComponent, authors_component_1.AuthorsComponent, auto_grow_directive_1.AutoGrowDirective, favorite_component_1.FavoriteComponent],
+        declarations: [app_component_1.AppComponent, courses_component_1.CoursesComponent, authors_component_1.AuthorsComponent, auto_grow_directive_1.AutoGrowDirective, favorite_component_1.FavoriteComponent, like_component_1.LikeComponent, vote_component_1.VoteComponent],
         bootstrap: [app_component_1.AppComponent],
         providers: [author_service_1.AuthorService, course_service_1.CourseService]
     })

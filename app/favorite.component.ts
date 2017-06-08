@@ -1,14 +1,17 @@
-import {Component} from '@angular/core';
+import {Component, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
 	selector: 'favorite',
-	template: `<i class="glyphicon" [class.glyphicon-star-empty]="!favorited" [class.glyphicon-star]="favorited" (click)="changeFilling()"> 
-  			 </i>`
+	template: `<i class="glyphicon" [class.glyphicon-star-empty]="!isFavorite" [class.glyphicon-star]="isFavorite" (click)="changeFilling()"> 
+  			 </i>`,
 })
 export class FavoriteComponent {
-	favorited = false;
+	@Input() isFavorite = false;
+
+	@Output() change = new EventEmitter();
 
 	changeFilling() {
-		this.favorited = !this.favorited;
+		this.isFavorite = !this.isFavorite;
+		this.change.emit({ newValue: this.isFavorite });
 	}
 }

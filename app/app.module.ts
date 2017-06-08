@@ -7,10 +7,12 @@ import {CourseService} from './course.service';
 import {AuthorService} from './author.service';
 import {AutoGrowDirective} from './auto-grow.directive';
 import {FavoriteComponent} from './favorite.component';
+import {LikeComponent} from './like.component';
+import {VoteComponent} from './vote.component';
 
 @NgModule({
   imports:      [ BrowserModule ], 
-  declarations: [ AppComponent, CoursesComponent, AuthorsComponent, AutoGrowDirective, FavoriteComponent],
+  declarations: [ AppComponent, CoursesComponent, AuthorsComponent, AutoGrowDirective, FavoriteComponent, LikeComponent, VoteComponent],
   bootstrap:    [ AppComponent ],
   providers: [AuthorService, CourseService]
 })

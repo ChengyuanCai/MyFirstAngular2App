@@ -1,0 +1,6 @@
+<h1>{{title}}</h1>
+<courses></courses>
+<authors></authors>
+<favorite [isFavorite]="post.isFavorite" (change)="onFavoriteChange($event)"></favorite>
+<like [totalLikes]="tweet.totalLikes" [isLike]="tweet.isLike"></like>
+<vote [voteCount]="votes.voteCount" [myVote]="votes.myVote" (vote)="onVote($event)"></vote>
