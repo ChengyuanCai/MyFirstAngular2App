@@ -12,10 +12,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var AutoGrowDirective = (function () {
     function AutoGrowDirective(el, renderer) {
+        this.el = el;
+        this.renderer = renderer;
     }
     AutoGrowDirective.prototype.onFocus = function () {
+        this.renderer.setElementStyle(this.el.nativeElement, 'width', '200');
     };
     AutoGrowDirective.prototype.onBlur = function () {
+        this.renderer.setElementStyle(this.el.nativeElement, 'width', '120');
     };
     return AutoGrowDirective;
 }());
