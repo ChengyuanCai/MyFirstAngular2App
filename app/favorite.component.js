@@ -7,17 +7,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
-        this.title = "My First Angular App";
+var FavoriteComponent = (function () {
+    function FavoriteComponent() {
+        this.favorited = false;
     }
-    return AppComponent;
+    FavoriteComponent.prototype.changeFilling = function () {
+        this.favorited = !this.favorited;
+    };
+    return FavoriteComponent;
 }());
-AppComponent = __decorate([
+FavoriteComponent = __decorate([
     core_1.Component({
-        selector: 'my-app',
-        template: "<h1>{{title}}</h1>\n  \t\t\t <courses></courses>\n  \t\t\t <authors></authors>\n  \t\t\t <favorite></favorite>\n                "
+        selector: 'favorite',
+        template: "<i class=\"glyphicon\" [class.glyphicon-star-empty]=\"!favorited\" [class.glyphicon-star]=\"favorited\" (click)=\"changeFilling()\"> \n  \t\t\t </i>"
     })
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+], FavoriteComponent);
+exports.FavoriteComponent = FavoriteComponent;
+//# sourceMappingURL=favorite.component.js.map

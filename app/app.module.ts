@@ -6,10 +6,11 @@ import {AuthorsComponent} from './authors.component';
 import {CourseService} from './course.service';
 import {AuthorService} from './author.service';
 import {AutoGrowDirective} from './auto-grow.directive';
+import {FavoriteComponent} from './favorite.component';
 
 @NgModule({
   imports:      [ BrowserModule ], 
-  declarations: [ AppComponent, CoursesComponent, AuthorsComponent, AutoGrowDirective],
+  declarations: [ AppComponent, CoursesComponent, AuthorsComponent, AutoGrowDirective, FavoriteComponent],
   bootstrap:    [ AppComponent ],
   providers: [AuthorService, CourseService]
 })
