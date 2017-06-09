@@ -2,7 +2,12 @@ import {Component, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
 	selector: 'favorite',
-	template: `<i class="glyphicon" [class.glyphicon-star-empty]="!isFavorite" [class.glyphicon-star]="isFavorite" (click)="changeFilling()"> 
+	template: `<i class="glyphicon" 
+			      [ngClass]="{
+			      	'glyphicon-star-empty' : !isFavorite,
+			      	'glyphicon-star' : isFavorite
+			      }"
+			      (click)="changeFilling()"> 
   			 </i>`,
 })
 export class FavoriteComponent {

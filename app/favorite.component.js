@@ -32,7 +32,7 @@ __decorate([
 FavoriteComponent = __decorate([
     core_1.Component({
         selector: 'favorite',
-        template: "<i class=\"glyphicon\" [class.glyphicon-star-empty]=\"!isFavorite\" [class.glyphicon-star]=\"isFavorite\" (click)=\"changeFilling()\"> \n  \t\t\t </i>",
+        template: "<i class=\"glyphicon\" \n\t\t\t      [ngClass]=\"{\n\t\t\t      \t'glyphicon-star-empty' : !isFavorite,\n\t\t\t      \t'glyphicon-star' : isFavorite\n\t\t\t      }\"\n\t\t\t      (click)=\"changeFilling()\"> \n  \t\t\t </i>",
     })
 ], FavoriteComponent);
 exports.FavoriteComponent = FavoriteComponent;
