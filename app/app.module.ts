@@ -9,10 +9,11 @@ import {AutoGrowDirective} from './auto-grow.directive';
 import {FavoriteComponent} from './favorite.component';
 import {LikeComponent} from './like.component';
 import {VoteComponent} from './vote.component';
+import {ZippyComponent} from './zippy.component';
 
 @NgModule({
   imports:      [ BrowserModule ], 
-  declarations: [ AppComponent, CoursesComponent, AuthorsComponent, AutoGrowDirective, FavoriteComponent, LikeComponent, VoteComponent],
+  declarations: [ AppComponent, CoursesComponent, AuthorsComponent, AutoGrowDirective, FavoriteComponent, LikeComponent, VoteComponent, ZippyComponent],
   bootstrap:    [ AppComponent ],
   providers: [AuthorService, CourseService]
 })
