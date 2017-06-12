@@ -1,17 +1,19 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
-import { usernameValidators } from './usernameValidators';
+import { UsernameValidators } from './usernameValidators';
 
 @Component({
 	selector:'signup-form',
 	templateUrl: 'app/signup-form.component.html'
 })
 export class SignUpFormComponent {
-	form: FormGroup;
+    form: FormGroup;
 
 	constructor(fb: FormBuilder) {
 		this.form = fb.group({
-			username: ['', Validators.compose([Validators.required, usernameValidators])], 
+			username: ['', Validators.compose([Validators.required, 
+						UsernameValidators.cannotContainSpace]), UsernameValidators.shouldBeUnique], 
+
 			password: ['', Validators.required]
 		});
 	}
@@ -23,6 +25,11 @@ export class SignUpFormComponent {
 	});*/
 
 	signUp() {
-		console.log(this.form.value);
+		//var result = authService.login(this.form.value);
+/*
+		this.form.getControl(username).setErrors({
+			invalidLogin: true					
+		})*/
+		console.log(this.form);
 	}
 }

@@ -15,7 +15,8 @@ var usernameValidators_1 = require("./usernameValidators");
 var SignUpFormComponent = (function () {
     function SignUpFormComponent(fb) {
         this.form = fb.group({
-            username: ['', forms_1.Validators.compose([forms_1.Validators.required, usernameValidators_1.usernameValidators])],
+            username: ['', forms_1.Validators.compose([forms_1.Validators.required,
+                    usernameValidators_1.UsernameValidators.cannotContainSpace]), usernameValidators_1.UsernameValidators.shouldBeUnique],
             password: ['', forms_1.Validators.required]
         });
     }
@@ -24,7 +25,12 @@ var SignUpFormComponent = (function () {
         password: new FormControl('', Validators.required)
     });*/
     SignUpFormComponent.prototype.signUp = function () {
-        console.log(this.form.value);
+        //var result = authService.login(this.form.value);
+        /*
+                this.form.getControl(username).setErrors({
+                    invalidLogin: true
+                })*/
+        console.log(this.form);
     };
     return SignUpFormComponent;
 }());
