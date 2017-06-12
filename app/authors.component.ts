@@ -7,8 +7,7 @@ import {AuthorService} from './author.service';
 			   {{title}}
 			   <ul>
 			   		<li *ngFor='let author of authors'>{{author}}</li> 
-			   </ul>`,
-	providers: [AuthorService]
+			   </ul>`
 })
 export class AuthorsComponent {
 	title = 'Title for the authors page';

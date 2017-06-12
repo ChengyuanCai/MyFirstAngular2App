@@ -10,10 +10,13 @@ import {FavoriteComponent} from './favorite.component';
 import {LikeComponent} from './like.component';
 import {VoteComponent} from './vote.component';
 import {ZippyComponent} from './zippy.component';
+import {ContactFormComponent} from './contact-form.component';
+import { FormsModule } from '@angular/forms';
+import { SubscriptionFormComponent } from './subscription-form.component';
 
 @NgModule({
-  imports:      [ BrowserModule ], 
-  declarations: [ AppComponent, CoursesComponent, AuthorsComponent, AutoGrowDirective, FavoriteComponent, LikeComponent, VoteComponent, ZippyComponent],
+  imports:      [ BrowserModule, FormsModule ], 
+  declarations: [ AppComponent, CoursesComponent, AuthorsComponent, AutoGrowDirective, FavoriteComponent, LikeComponent, VoteComponent, ZippyComponent, ContactFormComponent, SubscriptionFormComponent],
   bootstrap:    [ AppComponent ],
   providers: [AuthorService, CourseService]
 })
