@@ -14,9 +14,11 @@ import {ContactFormComponent} from './contact-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SubscriptionFormComponent } from './subscription-form.component';
 import { SignUpFormComponent } from './signup-form.component';
+import { HttpModule, JsonpModule } from '@angular/http';
+import { PostService } from './post.service';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, ReactiveFormsModule], 
+  imports:      [ BrowserModule, FormsModule, ReactiveFormsModule, HttpModule, JsonpModule], 
 
   declarations: [ AppComponent, CoursesComponent, AuthorsComponent, AutoGrowDirective, FavoriteComponent, 
   				LikeComponent, VoteComponent, ZippyComponent, ContactFormComponent, SubscriptionFormComponent, 
@@ -24,6 +26,6 @@ import { SignUpFormComponent } from './signup-form.component';
 
   bootstrap:    [ AppComponent ],
 
-  providers: [AuthorService, CourseService]
+  providers: [AuthorService, CourseService, PostService]
 })
 export class AppModule { }
