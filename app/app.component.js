@@ -48,10 +48,7 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "<div *ngIf = \"isLoading\">\n  \t\t\t\t<i class=\"fa fa-spinner fa-spin fa-3x\"></i>\n  \t\t\t</div>"
-        /*templateUrl: 'app/favorite.template.html',*/
-        ,
-        /*templateUrl: 'app/favorite.template.html',*/
+        templateUrl: 'app/favorite.template.html',
         providers: [post_service_1.PostService]
     }),
     __metadata("design:paramtypes", [post_service_1.PostService])

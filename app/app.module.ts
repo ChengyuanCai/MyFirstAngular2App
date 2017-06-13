@@ -16,16 +16,18 @@ import { SubscriptionFormComponent } from './subscription-form.component';
 import { SignUpFormComponent } from './signup-form.component';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { PostService } from './post.service';
+import { GitHubService } from './github.service';
+import {GitHubProfileComponent} from './github-profile.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, ReactiveFormsModule, HttpModule, JsonpModule], 
 
   declarations: [ AppComponent, CoursesComponent, AuthorsComponent, AutoGrowDirective, FavoriteComponent, 
   				LikeComponent, VoteComponent, ZippyComponent, ContactFormComponent, SubscriptionFormComponent, 
-  				SignUpFormComponent],
+  				SignUpFormComponent, GitHubProfileComponent],
 
   bootstrap:    [ AppComponent ],
 
-  providers: [AuthorService, CourseService, PostService]
+  providers: [AuthorService, CourseService, PostService, GitHubService]
 })
 export class AppModule { }

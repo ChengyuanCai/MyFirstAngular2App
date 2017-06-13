@@ -24,6 +24,8 @@ var subscription_form_component_1 = require("./subscription-form.component");
 var signup_form_component_1 = require("./signup-form.component");
 var http_1 = require("@angular/http");
 var post_service_1 = require("./post.service");
+var github_service_1 = require("./github.service");
+var github_profile_component_1 = require("./github-profile.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -34,9 +36,9 @@ AppModule = __decorate([
         imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, forms_1.ReactiveFormsModule, http_1.HttpModule, http_1.JsonpModule],
         declarations: [app_component_1.AppComponent, courses_component_1.CoursesComponent, authors_component_1.AuthorsComponent, auto_grow_directive_1.AutoGrowDirective, favorite_component_1.FavoriteComponent,
             like_component_1.LikeComponent, vote_component_1.VoteComponent, zippy_component_1.ZippyComponent, contact_form_component_1.ContactFormComponent, subscription_form_component_1.SubscriptionFormComponent,
-            signup_form_component_1.SignUpFormComponent],
+            signup_form_component_1.SignUpFormComponent, github_profile_component_1.GitHubProfileComponent],
         bootstrap: [app_component_1.AppComponent],
-        providers: [author_service_1.AuthorService, course_service_1.CourseService, post_service_1.PostService]
+        providers: [author_service_1.AuthorService, course_service_1.CourseService, post_service_1.PostService, github_service_1.GitHubService]
     })
 ], AppModule);
 exports.AppModule = AppModule;
