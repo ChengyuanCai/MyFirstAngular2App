@@ -1,2 +1,2 @@
 # MyFirstAngular2App
-Learning Angular2 for the first time. Upgrading from Angular1!
+Test Application for learning Angular2 for the first time. Upgrading from Angular1.
