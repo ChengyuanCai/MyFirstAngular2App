@@ -17,7 +17,7 @@ var GitHubProfileComponent = (function () {
     function GitHubProfileComponent(_gitHubService) {
         this._gitHubService = _gitHubService;
         this.isLoading = true;
-        this.username = "octocat";
+        this.username = "sCAIwalker";
         this.user = {};
         this.followers = [];
     }

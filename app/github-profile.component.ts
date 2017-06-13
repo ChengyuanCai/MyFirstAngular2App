@@ -20,7 +20,7 @@ import {GitHubService} from './github.service';
 })
 export class GitHubProfileComponent implements OnInit {
 	isLoading = true;
-	username = "octocat";
+	username = "sCAIwalker";
 	user = {};
 	followers = [];
 
